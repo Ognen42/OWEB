@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Order pizza! </title>
+    </head>
+
+    <body>
+        <h1 style="text-align: center;"> Order pizza! </h1>
+        <form style="text-align: center;">
+            <p style="text-align: center;"><b> Select the pizza size: </b></p>
+            <div style="text-align: center;">
+                <input type="radio" id="big" name="pizza_size" value="Big">
+                <label for="html"> Big </label><br>
+
+                <input type="radio" id="medium" name="pizza_size" value="Medium">
+                <label for="html"> Medium </label><br>
+
+                <input type="radio" id="small" name="pizza_size" value="Small">
+                <label for="html"> Small </label><br>
+            </div>
+
+            <p style="text-align: center;"><b> Select the crust type:</b></p>
+            <div style="text-align: center;">
+                <select id="crust" name="crust">
+                    <option value="deep_dish"> Deep dish </option>
+                    <option value="stuffed"> Stuffed </option>
+                    <option value="flatbread"> Flatbread </option>
+                </select>
+            </div>
+
+            <p style="text-align: center;"><b> Select the toppings: </b></p>
+            <div style="text-align: center;">
+                <input type="checkbox" id="sausages" name="topping" value="Sausages">
+                <label for="html"> Sausages </label><br>
+
+                <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni">
+                <label for="html"> Pepper </label><br>
+
+                <input type="checkbox" id="mushrooms" name="topping" value="Mushrooms">
+                <label for="html"> Mushrooms </label><br>
+            </div>
+
+            <div style="text-align: center;">
+                <label> Name: <input type="text"></label><br>
+                <label> Phone: <input type="tel"></label><br>
+                <label> Message: <br>
+                    <textarea rows="3" cols="20"></textarea>
+                </label><br>
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </body>
+</html>
