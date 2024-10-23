@@ -1,0 +1,47 @@
+#Order {
+    color: #e03d3d;
+    font-family: "Cascadia Code", sans-serif;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff5f5;
+}
+.container-outline {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #e03d3d;
+}
+strong {
+    font-family: "Cascadia Code", sans-serif;
+    display: block;
+    color: #157334;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+input[type="text"] {
+    width: 40%;
+    padding: 8px;
+    border: 2px solid #8d99ae;
+    border-radius: 4px;
+}
+input[type="tel"] {
+    width: 40%;
+    margin-top: 8px;
+    border: 2px solid #8d99ae;
+    border-radius: 4px;
+}
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 8px;
+    border: 2px solid #8d99ae;
+    border-radius: 4px;
+}
+label {
+    font-family: "Cascadia code", sans-serif;
+}
