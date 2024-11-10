@@ -1,0 +1,52 @@
+body {
+    font-family: "Cascadia code", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-block {
+    background-color: #0d6efd;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: #ffffff;
+    width: 40%;
+}
+
+#word-block {
+    display: block;
+    text-align: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.letter-block {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px #ffffff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.letter-block:disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#restart-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0d6efd;
+    display: none;
+}
+
+#restart-button:hover {
+    background-color: #ffffff;
+}
