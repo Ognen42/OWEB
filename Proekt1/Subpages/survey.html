@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Survey - Metropolis Automobiles </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <script src="Scripting/login.js"></script>
+    <script>
+        check_auth();
+    </script>
+    <script src="../Scripting/login.js"></script>
+    <script>
+        check_auth();
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="../home.html"> Metropolis Automobiles </a>
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="../home.html"> Home </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="new_vehicles.html"> New Vehicles </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="used_vehicles.html"> Used Vehicles </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="gallery.html"> Gallery </a>
+                </li>
+                <li class="nav-item active mr-3">
+                    <a class="nav-link" href="survey.html"> Survey </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4"> Website Feedback </h3>
+                        <form id="survey_form">
+                            <div class="form-group">
+                                <label> How satisfied were you with our service? </label>
+                                <select name="satisfaction" class="form-control" required>
+                                    <option value="5"> Very Satisfied </option>
+                                    <option value="4"> Somewhat Satisfied </option>
+                                    <option value="3"> Neutral </option>
+                                    <option value="2"> Somewhat Dissatisfied </option>
+                                    <option value="1"> Very Dissatisfied </option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label> Did you find what you were looking for? </label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="found_item" value="yes" class="custom-control-input" id="yes" required>
+                                    <label class="custom-control-label" for="yes"> Yes </label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="found_item" value="no" class="custom-control-input" id="no">
+                                    <label class="custom-control-label" for="no"> No </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label> Do you have any suggestions for improvement? </label>
+                                <textarea name="suggestions" class="form-control" rows="4"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block"> Submit Survey </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 mb-4">
+                    <h3> Metropolis Automobiles </h3>
+                    <p> Trusted by customers across the globe </p>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <h3> Contact </h3>
+                    <p> Email: contact@metropolisauto.com </p>
+                    <p> Phone: +389 70 123 456 </p>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <h3> Hours </h3>
+                    <p> Mon - Fri: 8:00 - 20:00 </p>
+                    <p> Sat - Sun: 9:00 - 16:00 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Scripting/survey.js"></script>
+</body>
+</html>

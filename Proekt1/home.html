@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Metropolis Automobiles </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .feature-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .vehicle-card {
+            transition: transform 0.2s;
+        }
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+        }
+        .small-img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script src="Scripting/login.js"></script>
+    <script>
+        check_auth();
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#"> Metropolis Automobiles </a>
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item active mr-3">
+                    <a class="nav-link" href="home.html"> Home </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="Subpages/new_vehicles.html"> New Vehicles </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="Subpages/used_vehicles.html"> Used Vehicles </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="Subpages/gallery.html"> Gallery </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="Subpages/survey.html"> Survey </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="bg-light text-center p-5 mb-5">
+            <h1 class="mb-3"> Welcome to Metropolis Automobiles </h1>
+            <p class="lead mb-4"> Find The Perfect Vehicle For You </p>
+            <a href="#categories" class="btn btn-primary"> View Our Vehicles </a>
+        </div>
+    </div>
+
+    <div class="container mb-5" id="categories">
+        <h2 class="text-center mb-4"> Our Vehicles </h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-sm-6 mb-4">
+                <div class="card vehicle-card">
+                    <div class="card-body">
+                        <h3 class="card-title"> New Vehicles </h3>
+                        <p class="card-text"> Discover our latest collection of brand new vehicles. </p>
+
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <img src="Images\2024_Hyundai_Elantra.avif" class="small-img" alt="New Vehicle 1">
+                            </div>
+                            <div class="col-6">
+                                <img src="Images\2024_Toyota_Corolla.avif" class="small-img" alt="New Vehicle 2">
+                            </div>
+                            <div class="col-6">
+                                <img src="Images\2024_Audi_A6_etron.avif" class="small-img" alt="New Vehicle 3">
+                            </div>
+                            <div class="col-6">
+                                <img src="Images\2024_BMW_i3.jpg" class="small-img" alt="New Vehicle 4">
+                            </div>
+                        </div>
+
+                        <ul class="list-unstyled mb-4">
+                            <li>- Latest Models Available</li>
+                            <li>- 5 Year Warranty</li>
+                            <li>- Diverse Loan Options</li>
+                        </ul>
+
+                        <a href="Subpages/new_vehicles.html" class="btn btn-primary"> View New Vehicles </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mb-4">
+                <div class="card vehicle-card">
+                    <div class="card-body">
+                        <h3 class="card-title"> Used Vehicles </h3>
+                        <p class="card-text"> Browse our selection of quality used vehicles. </p>
+
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <img src="Images\2018_Toyota_RAV4.webp" class="small-img" alt="Used Vehicle 1">
+                            </div>
+                            <div class="col-6">
+                                <img src="Images\2015_Ford_Focus.webp" class="small-img" alt="Used Vehicle 2">
+                            </div>
+                            <div class="col-6">
+                                <img src="Images\2018_Honda_Civic.webp" class="small-img" alt="Used Vehicle 3">
+                            </div>
+                            <div class="col-6">
+                                <img src="Images\2018_VW_Passat.jpg" class="small-img" alt="Used Vehicle 3">
+                            </div>
+                        </div>
+
+                        <ul class="list-unstyled mb-4">
+                            <li>- Fully Vetted for Defects</li>
+                            <li>- 3 Year Warranty</li>
+                            <li>- Competitive Pricing</li>
+                        </ul>
+ 
+                        <a href="Subpages/used_vehicles.html" class="btn btn-primary"> View Used Vehicles </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 mb-4">
+                    <h3> Metropolis Automobiles </h3>
+                    <p> Trusted by customers across the globe </p>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <h3> Contact </h3>
+                    <p> Email: contact@metropolisauto.com </p>
+                    <p> Phone: +389 70 123 456 </p>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <h3> Hours </h3>
+                    <p> Mon - Fri: 8:00 - 20:00 </p>
+                    <p> Sat - Sun: 9:00 - 16:00 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripting/main.js"></script>
+</body>
+</html>
