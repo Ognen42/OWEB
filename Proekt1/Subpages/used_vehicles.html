@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Used Vehicles - Metropolis Automobiles </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        .vehicle-img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .vehicle-card {
+            transition: transform 0.2s;
+        }
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <script src="../Scripting/login.js"></script>
+    <script>
+        check_auth();
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="../home.html"> Metropolis Automobiles </a>
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="../home.html"> Home </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="new_vehicles.html"> New Vehicles </a>
+                </li>
+                <li class="nav-item active mr-3">
+                    <a class="nav-link" href="used_vehicles.html"> Used Vehicles </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="gallery.html"> Gallery </a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="survey.html"> Survey </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title"> Filter Vehicles </h5>
+                <form id="filter_form" class="form-inline">
+                    <select id="price-filter" class="form-control mr-2 mb-2">
+                        <option value=""> Price Range </option>
+                        <option value="under15"> Under €15,000 </option>
+                        <option value="15to30"> €15,000 - €30,000 </option>
+                        <option value="30to45"> €30,000 - €45,000 </option>
+                        <option value="above45"> Over €45,000 </option>
+                    </select>
+                    <select id="type-filter" class="form-control mr-2 mb-2">
+                        <option value=""> Vehicle Type </option>
+                        <option value="Sedan"> Sedan </option>
+                        <option value="SUV"> SUV </option>
+                        <option value="Hybrid"> Hybrid </option>
+                        <option value="Electric"> Electric </option>
+                    </select>
+                    <button type="button" class="btn btn-primary mb-2" id="apply-used-filter"> Apply Filters </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4 vehicle-item" data-price="8950" data-type="Sedan">
+                <div class="card vehicle-card">
+                    <img src="..\Images\2015_Ford_Focus.webp" class="vehicle-img" alt="Ford Focus 2015">
+                    <div class="card-body">
+                        <h5 class="card-title"> Ford Focus 2015 </h5>
+                        <p class="card-text">
+                            <strong> Price: </strong> €8,950 <br>
+                            <strong> Type: </strong> Sedan <br>
+                            <strong> Range: </strong> 717km
+                        </p>
+                        <button class="btn btn-primary" data-action="test-drive" data-vehicle="Ford Focus 2015">
+                            Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 vehicle-item" data-price="18940" data-type="Sedan">
+                <div class="card vehicle-card">
+                    <img src="..\Images\2018_Honda_Civic.webp" class="vehicle-img" alt="BMW i3">
+                    <div class="card-body">
+                        <h5 class="card-title"> Honda Civic 2018 </h5>
+                        <p class="card-text">
+                            <strong> Price: </strong> €18,940 <br>
+                            <strong> Type: </strong> Sedan <br>
+                            <strong> Range: </strong> 724km
+                        </p>
+                        <button class="btn btn-primary" data-action="test-drive" data-vehicle="Honda Civic 2018">
+                            Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 vehicle-item" data-price="24660" data-type="Hybrid">
+                <div class="card vehicle-card">
+                    <img src="..\Images\2018_Toyota_RAV4.webp" class="vehicle-img" alt="Toyota RAV4 2018">
+                    <div class="card-body">
+                        <h5 class="card-title"> Toyota RAV4 </h5>
+                        <p class="card-text">
+                            <strong> Price: </strong> €24,660 <br>
+                            <strong> Type: </strong> Hybrid <br>
+                            <strong> Range: </strong> 666 km
+                        </p>
+                        <button class="btn btn-primary" data-action="test-drive" data-vehicle="Toyota RAV4 2018">
+                            Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 vehicle-item" data-price="15990" data-type="Sedan">
+                <div class="card vehicle-card" >
+                    <img src="..\Images\2018_VW_Passat.jpg" class="vehicle-img" alt="Volkswagen Passat">
+                    <div class="card-body">
+                        <h5 class="card-title"> Volkswagen Passat </h5>
+                        <p class="card-text">
+                            <strong> Price: </strong> €15,990 <br>
+                            <strong> Type: </strong> Sedan <br>
+                            <strong> Range: </strong> 743km
+                        </p>
+                        <button class="btn btn-primary" data-action="test-drive" data-vehicle="Volkswagen Passat">
+                            Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 vehicle-item" data-price="31300" data-type="Electric">
+                <div class="card vehicle-card">
+                    <img src="..\Images\Mustang_Mach_E.avif" class="vehicle-img" alt="Mustang Mach E">
+                    <div class="card-body">
+                        <h5 class="card-title"> Mustang Mach E </h5>
+                        <p class="card-text">
+                            <strong> Price: </strong> €31,300 <br>
+                            <strong> Type: </strong> Electric <br>
+                            <strong> Range: </strong> 402km
+                        </p>
+                        <button class="btn btn-primary" data-action="test-drive" data-vehicle="Mustang Mach E">
+                            Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 vehicle-item" data-price="56320" data-type="SUV">
+                <div class="card vehicle-card">
+                    <img src="..\Images\BMW_X7.png" class="vehicle-img" alt="BMW X7">
+                    <div class="card-body">
+                        <h5 class="card-title"> BMW X7 </h5>
+                        <p class="card-text">
+                            <strong> Price: </strong> €56,320 <br>
+                            <strong> Type: </strong> SUV <br>
+                            <strong> Range: </strong> 724km
+                        </p>
+                        <button class="btn btn-primary" data-action="test-drive" data-vehicle="BMW X7">
+                            Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="test_drive_modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Schedule a Test Drive </h5>
+                    <button type="button" class="close" onclick="hide_test_drive_form()">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="test-drive-form">
+                        <div class="form-group">
+                            <label> Full Name </label>
+                            <input type="text" name="full_name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label> Email </label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle</label>
+                            <input type="text" name="vehicle" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label> Preferred Date </label>
+                            <input type="date" name="date" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary"> Schedule Test Drive </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 mb-4">
+                    <h3> Metropolis Automobiles </h3>
+                    <p> Trusted by customers across the globe </p>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <h3> Contact </h3>
+                    <p> Email: contact@metropolisauto.com </p>
+                    <p> Phone: +389 70 123 456 </p>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <h3> Hours </h3>
+                    <p> Mon - Fri: 8:00 - 20:00 </p>
+                    <p> Sat - Sun: 9:00 - 16:00 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Scripting/main.js"></script>
+</body>
+</html>
