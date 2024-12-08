@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Filterable Table </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: "Cascadia code", sans-serif;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .search-group {
+            flex: 1;
+        }
+
+        .search-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #b7b7b7;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #b7b7b7;
+        }
+
+        th {
+            background-color: #cdcdcd;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e7e7e7;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1> Filterable Table </h1>
+    <p> Type in any of the input fields to filter the table: </p>
+    
+    <div class="search-container">
+        <div class="search-group">
+            <label for="first-name-input"> First Name </label>
+            <input type="text" id="first-name-input" placeholder="Filter by first name...">
+        </div>
+        <div class="search-group">
+            <label for="last-name-input"> Last Name </label>
+            <input type="text" id="last-name-input" placeholder="Filter by last name...">
+        </div>
+        <div class="search-group">
+            <label for="email-input"> E-mail </label>
+            <input type="text" id="email-input" placeholder="Filter by e-mail...">
+        </div>
+    </div>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th> First name </th>
+                <th> Last name </th>
+                <th> E-mail </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Gordon </td>
+                <td> Moore </td>
+                <td> gmoore@intel.com </td>
+            </tr>
+            <tr>
+                <td> Andy </td>
+                <td> Grove </td>
+                <td> andy.grove@intel.com </td>
+            </tr>
+            <tr>
+                <td> Bill </td>
+                <td> Gates </td>
+                <td> bill@outlook.com </td>
+            </tr>
+            <tr>
+                <td> Mark </td>
+                <td> Zuckerberg </td>
+                <td> mark@facebook.com </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            function filterTable() {
+                var first_name = $("#first-name-input").val().toLowerCase();
+                var last_name = $("#last-name-input").val().toLowerCase();
+                var email = $("#email-input").val().toLowerCase();
+
+                $("#data-table tbody tr").each(function() {
+                    var row = $(this);
+                    var first_name_cell = row.find("td:eq(0)").text().toLowerCase();
+                    var last_name_cell = row.find("td:eq(1)").text().toLowerCase();
+                    var email_cell = row.find("td:eq(2)").text().toLowerCase();
+
+                    var first_name_match = first_name_cell.indexOf(first_name) > -1;
+                    var last_name_match = last_name_cell.indexOf(last_name) > -1;
+                    var email_match = email_cell.indexOf(email) > -1;
+
+                    row.toggle(
+                        (first_name === "" || first_name_match) &&
+                        (last_name === "" || last_name_match) &&
+                        (email === "" || email_match)
+                    );
+                });
+            }
+            $("#first-name-input, #last-name-input, #email-input").on("keyup", filterTable);
+        });
+    </script>
+</body>
+</html>
